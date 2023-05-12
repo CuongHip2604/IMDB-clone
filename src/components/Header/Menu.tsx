@@ -9,7 +9,7 @@ const items = [
   },
   {
     key: '/tv-shows',
-    value: 'TV shows',
+    value: 'TV Shows',
   },
 ];
 

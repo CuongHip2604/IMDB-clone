@@ -34,7 +34,7 @@ export const MovieName = styled.p`
   padding: 0 8px;
 `;
 export const MovieDescription = styled.p`
-  color: #6b7280;
+  color: ${(props) => props.theme.gray_500};
   text-align: center;
   overflow: hidden;
   text-overflow: ellipsis;
