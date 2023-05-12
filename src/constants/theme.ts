@@ -6,4 +6,5 @@ export const theme = {
   neutral_500: '#737373',
   neutral_600: '#525252',
   white: '#fff',
+  black: '#000',
 };
