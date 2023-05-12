@@ -49,7 +49,7 @@ export default function Movies({ title, isMoviePage }: IMoviesProps) {
               isCalledAPI.current = false;
               setPage((prev) => prev + 1);
             }}
-            hasMore
+            hasMore={movies.length < 250}
             loader={<Loading />}
             style={{ overflow: 'hidden' }}
           >
