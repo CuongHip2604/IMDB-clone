@@ -27,7 +27,7 @@ axiosInstance.interceptors.request.use(
 
 axiosInstance.interceptors.response.use(
   (response: AxiosResponse) => {
-    return response.data;
+    return response;
   },
   (error: AxiosError) => {
     return Promise.reject(error);
@@ -51,10 +51,10 @@ const callAPI = (
   }
 
   return res
-    .then((resp: Record<string, any>) => {
-      return resp;
+    .then((resp: AxiosResponse) => {
+      return resp.data;
     })
-    .catch(async (error: any) => {
+    .catch(async (error: AxiosError) => {
       switch (error.response?.status) {
         case 400: // Wrong url or params
         case 404: // Nor found

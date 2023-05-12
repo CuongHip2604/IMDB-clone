@@ -1,14 +1,14 @@
 import Header from 'components/Header';
 import { Outlet } from 'react-router-dom';
-import { MainContent } from './styles';
+import { Container, MainContent } from './styles';
 
 export default function AppLayout() {
   return (
-    <div className="container">
+    <Container>
       <Header />
       <MainContent>
         <Outlet />
       </MainContent>
-    </div>
+    </Container>
   );
 }

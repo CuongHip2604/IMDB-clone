@@ -47,6 +47,9 @@ export const InputSearch = styled.input`
 
 export const SearchContainer = styled.div`
   position: relative;
+  @media (max-width: 768px) {
+    display: none;
+  }
 `;
 
 export const SearchIcon = styled(IconSearch)`
@@ -64,5 +67,9 @@ export const LogoContainer = styled.div`
   & img {
     width: 100%;
     height: 100%;
+  }
+
+  @media (max-width: 480px) {
+    display: none;
   }
 `;

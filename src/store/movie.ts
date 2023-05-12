@@ -23,10 +23,14 @@ const movieSlice = createSlice({
     },
   },
   extraReducers(builder) {
+    builder.addCase(fetchMovies.pending, (state: MovieState) => {
+      state.loading = true;
+    });
     builder.addCase(
       fetchMovies.fulfilled,
       (state: MovieState, action: PayloadAction<MovieInterface[]>) => {
         state.movies = [...state.movies, ...action.payload];
+        state.loading = false;
       },
     );
     builder.addCase(fetchMovieById.pending, (state: MovieState) => {
