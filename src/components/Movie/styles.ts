@@ -13,7 +13,8 @@ export const MovieContainer = styled.div`
   cursor: pointer;
 
   @media (max-width: 480px) {
-    max-height: 510px;
+    max-height: 520px;
+    grid-template-rows: 440px min-content min-content;
   }
 `;
 

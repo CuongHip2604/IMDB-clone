@@ -11,6 +11,10 @@ export const HeaderContainer = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  @media (max-width: 576px) {
+    padding: 0rem 2rem;
+  }
 `;
 
 export const MenuContainer = styled.ul`

@@ -3,7 +3,7 @@ import { createBrowserRouter } from 'react-router-dom';
 
 const Loader = (Component: LazyExoticComponent<() => JSX.Element>) => () =>
   (
-    <Suspense fallback={<div>Loading...</div>}>
+    <Suspense fallback={<div></div>}>
       <Component />
     </Suspense>
   );

@@ -54,10 +54,10 @@ export default function Movies({ title, isMoviePage }: IMoviesProps) {
             style={{ overflow: 'hidden' }}
           >
             <MovieList>
-              {movies.map((movie) => (
+              {movies.map((movie, index) => (
                 <Movie
                   onClick={() => isMoviePage && navigate(`/movies/${movie.id}`)}
-                  key={movie.id}
+                  key={index}
                   movie={{
                     image: movie.image,
                     name: movie.title,
