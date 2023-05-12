@@ -22,17 +22,18 @@ export const MenuContainer = styled.ul`
 export const MenuItem = styled.li<MenuItemProps>`
   cursor: pointer;
   border-bottom: 2px solid
-    ${(props) => (props.active ? '#f43f5e' : 'transparent')};
+    ${(props) => (props.active ? props.theme.rose_500 : 'transparent')};
   padding: 8px 0;
-  color: ${(props) => (props.active ? '#f43f5e' : '#6b7280')};
+  color: ${(props) =>
+    props.active ? props.theme.rose_500 : props.theme.gray_500};
   font-weight: ${(props) => (props.active ? 'bold' : 'normal')};
 `;
 
 export const InputSearch = styled.input`
   padding: 0.75rem;
   padding-right: 2rem;
-  background-color: #fff;
-  border: 1px solid #d4d4d4;
+  background-color: ${(props) => props.theme.white};
+  border: 1px solid ${(props) => props.theme.neutral_300};
   border-radius: 0.375rem;
   width: 200px;
   font-weight: 300;
@@ -40,7 +41,7 @@ export const InputSearch = styled.input`
   outline-offset: 2px;
 
   &:focus {
-    border-color: #f43f5e;
+    border-color: ${(props) => props.theme.rose_500};
   }
 `;
 

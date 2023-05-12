@@ -7,7 +7,7 @@ export const LoadingContainer = styled.div`
 
 export const LoadingIcon = styled.svg`
   color: 'rgb(229,231,235)';
-  fill: '#f43f5e';
+  fill: ${(props) => props.theme.rose_500};
   width: 40px;
   height: 40px;
 `;

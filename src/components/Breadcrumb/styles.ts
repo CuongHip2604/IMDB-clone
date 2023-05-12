@@ -8,7 +8,7 @@ export const BreadcrumbContainer = styled.ul`
   list-style: none;
 
   & li:last-child {
-    color: #525252;
+    color: ${(props) => props.theme.neutral_600};
     font-weight: bold;
   }
 
@@ -18,7 +18,7 @@ export const BreadcrumbContainer = styled.ul`
 `;
 
 export const BreadcrumbItem = styled.li`
-  color: #737373;
+  color: ${(props) => props.theme.neutral_500};
 
   &::after {
     content: '/';
