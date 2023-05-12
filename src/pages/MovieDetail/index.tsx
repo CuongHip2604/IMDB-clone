@@ -20,6 +20,7 @@ import { useAppDispatch, useAppSelector } from 'hooks/store';
 import { fetchMovieById } from 'store/actions/movie';
 import Loading from 'components/Loading';
 import { theme } from 'constants/theme';
+import { LoadingWraper } from 'components/Movies/styles';
 
 export default function MovieDetail() {
   const params = useParams();
@@ -53,7 +54,9 @@ export default function MovieDetail() {
   return (
     <MovieDetailContainer>
       {loading ? (
-        <Loading />
+        <LoadingWraper>
+          <Loading />
+        </LoadingWraper>
       ) : (
         <>
           <Breadcrumb items={breadcrumbs} />

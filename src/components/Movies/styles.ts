@@ -29,3 +29,10 @@ export const MovieContainer = styled.div`
   flex-direction: column;
   gap: 24px;
 `;
+
+export const LoadingWraper = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 108px);
+`;
